@@ -119,7 +119,8 @@ header.top{display:flex;justify-content:space-between;align-items:center;gap:16p
 .mlist .sub{font-size:14px;color:var(--muted);margin:0 0 16px}
 .ex{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:0;padding:14px 16px;margin:0 0 10px}
 .ex.past{opacity:.6}
-.ex-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:0 0 8px}
+.ex-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:6px 10px;margin:0 0 8px}
+.ex h3{white-space:nowrap}
 .ex h3{margin:0;font-size:17px;letter-spacing:-.01em}
 .ex h3 small{font-weight:500;color:var(--muted);font-size:14px;margin-left:6px}
 .st{font-size:12px;font-weight:700;border-radius:6px;padding:2px 8px;white-space:nowrap;background:var(--t);color:var(--x)}
@@ -341,19 +342,26 @@ function renderList(){
   const rank = {open:0, soon:1, wait:2, done:3};
   touched.sort((a,b) => rank[statusOf(a)[0]] - rank[statusOf(b)[0]] || firstIn(a).localeCompare(firstIn(b)));
   $("msub").textContent = touched.length ? `이번 달에 접수·시험·발표가 있는 회차 ${touched.length}개` : "";
-  const row = (label, a, b, kind) => {
+  const row = (label, a, b, kind, noEm) => {
     if(!a) return "";
     const on = inMonth(a) || inMonth(b);
     let em = "";
     if(kind === "reg" && b && T <= b && T >= a){ const n = diff(b); em = `<em class="${n <= 3 ? "urgent" : ""}">마감 ${n === 0 ? "오늘" : "D-" + n}</em>`; }
     else if(kind === "reg" && T < a){ em = `<em>시작 D-${diff(a)}</em>`; }
     else if(kind !== "reg" && T <= a){ const n = diff(a); em = `<em>${n === 0 ? "오늘" : "D-" + n}</em>`; }
+    if(noEm) em = "";
     return `<dt>${label}</dt><dd class="${on ? "inm" : ""}">${b ? `${md(a)} ~ ${md(b)}` : mdw(a)}${em}</dd>`;
   };
-  const card = e => { const [sk, sl] = statusOf(e);
+  const card = e => { const [sk, sl0] = statusOf(e);
+    // 배지에 D-day를 넣고, 같은 D-day는 본문에서 뺀다
+    let sl = sl0, skip = "";
+    if(sk === "open"){ const n = diff(e.regEnd); sl = `${sl0} · ${n === 0 ? "오늘 마감" : "마감 D-" + n}`; skip = "reg"; }
+    else if(sk === "soon" && e.regStart && T < e.regStart){ sl = `${sl0} · D-${diff(e.regStart)}`; skip = "reg"; }
+    else if(sl0 === "시험 예정" && e.exam && T <= e.exam){ const n = diff(e.exam); sl = n === 0 ? "오늘 시험" : `${sl0} · D-${n}`; skip = "ex"; }
+    else if(sl0 === "발표 대기" && e.result && T <= e.result){ const n = diff(e.result); sl = n === 0 ? "오늘 발표" : `${sl0} · D-${n}`; skip = "rr"; }
     return `<article class="ex${sk === "done" ? " past" : ""}" style="${vars(e.cat)}">
       <div class="ex-top"><h3>${esc(e.name)}<small>${esc(e.round)}</small></h3><span class="st ${sk}">${sl}</span></div>
-      <dl>${e.regStart ? row("접수", e.regStart, e.regEnd, "reg") : `<dt>접수</dt><dd>시행처 공고 확인</dd>`}${row("시험", e.exam, null, "ex")}${row("발표", e.result, null, "rr")}</dl>
+      <dl>${e.regStart ? row("접수", e.regStart, e.regEnd, "reg", skip === "reg") : `<dt>접수</dt><dd>시행처 공고 확인</dd>`}${row("시험", e.exam, null, "ex", skip === "ex")}${row("발표", e.result, null, "rr", skip === "rr")}</dl>
       ${e.note ? `<p class="note">${esc(e.note)}</p>` : ""}
       ${sk === "open" || sk === "soon" ? `<a href="${esc(e.url)}" target="_blank" rel="noopener">접수하러 가기 ↗</a>` : sk === "wait" ? `<a href="${esc(e.url)}" target="_blank" rel="noopener">시행처에서 확인 ↗</a>` : ""}
     </article>`; };
