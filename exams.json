@@ -1,0 +1,401 @@
+{
+  "fixed": [
+    {
+      "cat": "컴활",
+      "name": "컴퓨터활용능력 1·2급",
+      "round": "대한상공회의소 상시검정",
+      "lines": [
+        [
+          "방식",
+          "원하는 날짜·시험장을 직접 골라 접수"
+        ],
+        [
+          "필기·실기",
+          "모두 상시 시행"
+        ]
+      ],
+      "note": "시험장별 일정은 로그인 후 접수 화면에서 확인할 수 있습니다. 2027년 1월부터 새 출제기준이 적용될 예정이므로 시행처 공지를 확인하시기 바랍니다.",
+      "url": "https://license.korcham.net",
+      "monthNotes": {
+        "2026-11": "연말연시(12월 말~1월 초)에는 상시검정이 시행되지 않습니다. 2027년 출제기준 변경 전 응시를 희망하시는 경우 미리 접수하시기 바랍니다.",
+        "2026-12": "12월 말~1월 초에는 상시검정이 시행되지 않습니다. 연말에는 시험장이 조기 마감될 수 있으므로 서둘러 접수하시기 바랍니다. 정확한 미시행 기간은 시행처 공지를 확인하시기 바랍니다."
+      }
+    }
+  ],
+  "exams": [
+    {
+      "cat": "ITQ",
+      "name": "ITQ",
+      "round": "제1회 정기",
+      "regStart": "2025-12-04",
+      "regEnd": "2025-12-10",
+      "exam": "2026-01-10",
+      "result": "2026-01-29",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "ITQ",
+      "name": "ITQ",
+      "round": "제2회 정기",
+      "regStart": "2026-01-01",
+      "regEnd": "2026-01-07",
+      "exam": "2026-02-07",
+      "result": "2026-02-26",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "ITQ",
+      "name": "ITQ",
+      "round": "제13회 특별",
+      "regStart": "2026-01-15",
+      "regEnd": "2026-01-21",
+      "exam": "2026-02-22",
+      "result": "2026-03-13",
+      "note": "특별시험은 과목·급수 및 접수 지역·고사장이 제한될 수 있습니다.",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "ITQ",
+      "name": "ITQ",
+      "round": "제3회 정기",
+      "regStart": "2026-02-05",
+      "regEnd": "2026-02-11",
+      "exam": "2026-03-14",
+      "result": "2026-04-02",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "ITQ",
+      "name": "ITQ",
+      "round": "제4회 정기",
+      "regStart": "2026-03-05",
+      "regEnd": "2026-03-11",
+      "exam": "2026-04-11",
+      "result": "2026-04-30",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "ITQ",
+      "name": "ITQ",
+      "round": "제5회 정기",
+      "regStart": "2026-04-02",
+      "regEnd": "2026-04-08",
+      "exam": "2026-05-09",
+      "result": "2026-05-28",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "ITQ",
+      "name": "ITQ",
+      "round": "제14회 특별",
+      "regStart": "2026-04-23",
+      "regEnd": "2026-04-29",
+      "exam": "2026-05-31",
+      "result": "2026-06-19",
+      "note": "특별시험은 과목·급수 및 접수 지역·고사장이 제한될 수 있습니다.",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "ITQ",
+      "name": "ITQ",
+      "round": "제6회 정기",
+      "regStart": "2026-05-07",
+      "regEnd": "2026-05-13",
+      "exam": "2026-06-13",
+      "result": "2026-07-02",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "ITQ",
+      "name": "ITQ",
+      "round": "제7회 정기",
+      "regStart": "2026-06-04",
+      "regEnd": "2026-06-10",
+      "exam": "2026-07-11",
+      "result": "2026-07-30",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "ITQ",
+      "name": "ITQ",
+      "round": "제8회 정기",
+      "regStart": "2026-07-02",
+      "regEnd": "2026-07-08",
+      "exam": "2026-08-08",
+      "result": "2026-08-27",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "ITQ",
+      "name": "ITQ",
+      "round": "제15회 특별",
+      "regStart": "2026-07-16",
+      "regEnd": "2026-07-22",
+      "exam": "2026-08-23",
+      "result": "2026-09-11",
+      "note": "특별시험은 과목·급수 및 접수 지역·고사장이 제한될 수 있습니다.",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "ITQ",
+      "name": "ITQ",
+      "round": "제9회 정기",
+      "regStart": "2026-08-06",
+      "regEnd": "2026-08-12",
+      "exam": "2026-09-12",
+      "result": "2026-10-01",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "ITQ",
+      "name": "ITQ",
+      "round": "제10회 정기",
+      "regStart": "2026-09-10",
+      "regEnd": "2026-09-16",
+      "exam": "2026-10-17",
+      "result": "2026-11-05",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "ITQ",
+      "name": "ITQ",
+      "round": "제11회 정기",
+      "regStart": "2026-10-08",
+      "regEnd": "2026-10-14",
+      "exam": "2026-11-14",
+      "result": "2026-12-03",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "ITQ",
+      "name": "ITQ",
+      "round": "제16회 특별",
+      "regStart": "2026-10-22",
+      "regEnd": "2026-10-28",
+      "exam": "2026-11-29",
+      "result": "2026-12-18",
+      "note": "특별시험은 과목·급수 및 접수 지역·고사장이 제한될 수 있습니다.",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "ITQ",
+      "name": "ITQ",
+      "round": "제12회 정기",
+      "regStart": "2026-11-05",
+      "regEnd": "2026-11-11",
+      "exam": "2026-12-12",
+      "result": "2026-12-31",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "GTQ",
+      "name": "GTQ",
+      "round": "제1회 정기",
+      "regStart": "2025-12-24",
+      "regEnd": "2025-12-31",
+      "exam": "2026-01-24",
+      "result": "2026-02-20",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "GTQ",
+      "name": "GTQ",
+      "round": "제2회 정기",
+      "regStart": "2026-01-28",
+      "regEnd": "2026-02-04",
+      "exam": "2026-02-28",
+      "result": "2026-03-20",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "GTQ",
+      "name": "GTQ",
+      "round": "제3회 정기",
+      "regStart": "2026-02-25",
+      "regEnd": "2026-03-04",
+      "exam": "2026-03-28",
+      "result": "2026-04-17",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "GTQ",
+      "name": "GTQ",
+      "round": "제4회 정기",
+      "regStart": "2026-03-25",
+      "regEnd": "2026-04-01",
+      "exam": "2026-04-25",
+      "result": "2026-05-15",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "GTQ",
+      "name": "GTQ",
+      "round": "제5회 정기",
+      "regStart": "2026-04-29",
+      "regEnd": "2026-05-06",
+      "exam": "2026-05-30",
+      "result": "2026-06-26",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "GTQ",
+      "name": "GTQ",
+      "round": "제6회 정기",
+      "regStart": "2026-05-27",
+      "regEnd": "2026-06-04",
+      "exam": "2026-06-27",
+      "result": "2026-07-17",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "GTQ",
+      "name": "GTQ",
+      "round": "제7회 정기",
+      "regStart": "2026-06-24",
+      "regEnd": "2026-07-01",
+      "exam": "2026-07-25",
+      "result": "2026-08-14",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "GTQ",
+      "name": "GTQ",
+      "round": "제8회 정기",
+      "regStart": "2026-07-22",
+      "regEnd": "2026-07-29",
+      "exam": "2026-08-22",
+      "result": "2026-09-11",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "GTQ",
+      "name": "GTQ",
+      "round": "제9회 정기",
+      "regStart": "2026-08-19",
+      "regEnd": "2026-08-26",
+      "exam": "2026-09-19",
+      "result": "2026-10-16",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "GTQ",
+      "name": "GTQ",
+      "round": "제10회 정기",
+      "regStart": "2026-09-23",
+      "regEnd": "2026-09-30",
+      "exam": "2026-10-24",
+      "result": "2026-11-13",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "GTQ",
+      "name": "GTQ",
+      "round": "제11회 정기",
+      "regStart": "2026-10-28",
+      "regEnd": "2026-11-04",
+      "exam": "2026-11-28",
+      "result": "2026-12-28",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "GTQ",
+      "name": "GTQ",
+      "round": "제12회 정기",
+      "regStart": "2026-11-18",
+      "regEnd": "2026-11-25",
+      "exam": "2026-12-19",
+      "result": "2027-01-08",
+      "note": "",
+      "url": "https://license.kpc.or.kr"
+    },
+    {
+      "cat": "전산회계·세무",
+      "name": "전산회계·전산세무",
+      "round": "제124회",
+      "regStart": "2026-01-02",
+      "regEnd": "2026-01-08",
+      "exam": "2026-01-31",
+      "result": "2026-02-26",
+      "note": "",
+      "url": "https://license.kacpta.or.kr"
+    },
+    {
+      "cat": "전산회계·세무",
+      "name": "전산회계·전산세무",
+      "round": "제125회",
+      "regStart": "2026-03-05",
+      "regEnd": "2026-03-11",
+      "exam": "2026-04-04",
+      "result": "2026-04-23",
+      "note": "",
+      "url": "https://license.kacpta.or.kr"
+    },
+    {
+      "cat": "전산회계·세무",
+      "name": "전산회계·전산세무",
+      "round": "제126회",
+      "regStart": "2026-04-30",
+      "regEnd": "2026-05-06",
+      "exam": "2026-06-06",
+      "result": "2026-06-25",
+      "note": "",
+      "url": "https://license.kacpta.or.kr"
+    },
+    {
+      "cat": "전산회계·세무",
+      "name": "전산회계·전산세무",
+      "round": "제127회",
+      "regStart": "2026-07-02",
+      "regEnd": "2026-07-08",
+      "exam": "2026-08-01",
+      "result": "2026-08-20",
+      "note": "",
+      "url": "https://license.kacpta.or.kr"
+    },
+    {
+      "cat": "전산회계·세무",
+      "name": "전산회계·전산세무",
+      "round": "제128회",
+      "regStart": "2026-08-27",
+      "regEnd": "2026-09-02",
+      "exam": "2026-10-03",
+      "result": "2026-10-29",
+      "note": "",
+      "url": "https://license.kacpta.or.kr"
+    },
+    {
+      "cat": "전산회계·세무",
+      "name": "전산회계·전산세무",
+      "round": "제129회",
+      "regStart": "2026-11-05",
+      "regEnd": "2026-11-11",
+      "exam": "2026-12-05",
+      "result": "2026-12-24",
+      "note": "전산회계·전산세무 전 급수가 같은 날 시행됩니다.",
+      "url": "https://license.kacpta.or.kr"
+    }
+  ]
+}
