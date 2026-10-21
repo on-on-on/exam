@@ -196,7 +196,6 @@ footer p{margin:0 0 6px}
       <div class="cal" id="cal"></div>
       <div class="legend">
         <span><b class="lg-reg"></b>접수 기간</span>
-        <span><b class="lg-end"></b>접수 마감일</span>
         <span><b class="lg-ex">시험</b>시험일</span>
         <span><b class="lg-rr"></b>합격 발표</span>
       </div>
@@ -303,7 +302,7 @@ function renderCal(){
       if(e.exam === s){ marks.push(`<span class="pill" style="${v}">${sh}</span>`); labels.push(`${sh} 시험`); }
       if(e.regStart && e.regStart <= s && s <= e.regEnd){
         const end = s === e.regEnd;
-        marks.push(`<span class="mk ${end ? "end" : "reg"}" style="${v}"></span>`);
+        marks.push(`<span class="mk reg" style="${v}"></span>`);
         labels.push(`${sh} ${end ? "접수 마감" : "접수 기간"}`);
       }
       if(e.result === s){ marks.push(`<span class="ring" style="${v}"></span>`); labels.push(`${sh} 합격 발표`); }
