@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
 :root{
-  --bg:#f3f2f0; --surface:#ffffff; --line:#dad7d2; --text:#232120; --muted:#6b6662;
+  --bg:#f3f2f0; --surface:#ffffff; --line:#dad7d2; --text:#232120; --muted:#5c5753;
   --accent:#c2540a; --hl:#232120; --hl-band:transparent; --hl-text:#f3f2f0; --chip:#ebe9e6;
   --urgent:#c2540a; --today:#e8650a;
   --font:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;
@@ -46,14 +46,15 @@ header.top{display:flex;justify-content:space-between;align-items:center;gap:16p
 .hero p{color:var(--muted);font-size:17px;max-width:34em;margin:0}
 
 
-:root{--r-itq:#b5d4f4;--r-gtq:#cecbf6;--r-tax:#9fe1cb;--c-itq:#378add;--t-itq:#e6f1fb;--x-itq:#0c447c;--c-gtq:#7f77dd;--t-gtq:#eeedfe;--x-gtq:#3c3489;--c-tax:#1d9e75;--t-tax:#e1f5ee;--x-tax:#085041}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--r-itq:rgba(55,138,221,.45);--r-gtq:rgba(127,119,221,.45);--r-tax:rgba(29,158,117,.45);--t-itq:rgba(55,138,221,.28);--x-itq:#b5d4f4;--t-gtq:rgba(127,119,221,.3);--x-gtq:#cecbf6;--t-tax:rgba(29,158,117,.28);--x-tax:#9fe1cb}}
-:root[data-theme="dark"]{--r-itq:rgba(55,138,221,.45);--r-gtq:rgba(127,119,221,.45);--r-tax:rgba(29,158,117,.45);--t-itq:rgba(55,138,221,.28);--x-itq:#b5d4f4;--t-gtq:rgba(127,119,221,.3);--x-gtq:#cecbf6;--t-tax:rgba(29,158,117,.28);--x-tax:#9fe1cb}
+:root{--r-itq:#7fb4ea;--r-gtq:#a9a2ef;--r-tax:#6fcfae;--c-itq:#378add;--t-itq:#e6f1fb;--x-itq:#0c447c;--c-gtq:#7f77dd;--t-gtq:#eeedfe;--x-gtq:#3c3489;--c-tax:#1d9e75;--t-tax:#e1f5ee;--x-tax:#085041}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--r-itq:rgba(55,138,221,.62);--r-gtq:rgba(127,119,221,.62);--r-tax:rgba(29,158,117,.62);--t-itq:rgba(55,138,221,.28);--x-itq:#b5d4f4;--t-gtq:rgba(127,119,221,.3);--x-gtq:#cecbf6;--t-tax:rgba(29,158,117,.28);--x-tax:#9fe1cb}}
+:root[data-theme="dark"]{--r-itq:rgba(55,138,221,.62);--r-gtq:rgba(127,119,221,.62);--r-tax:rgba(29,158,117,.62);--t-itq:rgba(55,138,221,.28);--x-itq:#b5d4f4;--t-gtq:rgba(127,119,221,.3);--x-gtq:#cecbf6;--t-tax:rgba(29,158,117,.28);--x-tax:#9fe1cb}
 
 .months{display:flex;align-items:center;gap:10px;margin:0 0 14px}
 .months .yr{font-weight:700;font-size:16px;white-space:nowrap}
 .months select{font:inherit;font-weight:700;font-size:16px;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:6px 10px}
-.mtabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:2px}
+.mtabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:2px;flex:1 1 auto;min-width:0;--fl:0px;--fr:0px;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 var(--fl),#000 calc(100% - var(--fr)),transparent 100%);mask-image:linear-gradient(to right,transparent 0,#000 var(--fl),#000 calc(100% - var(--fr)),transparent 100%)}
+.mtabs.fl{--fl:32px}.mtabs.fr{--fr:32px}
 .mtabs::-webkit-scrollbar{display:none}
 .mtabs button{font:inherit;font-size:15px;flex:0 0 auto;min-width:52px;padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--text);cursor:pointer;position:relative}
 .mtabs button[aria-pressed="true"]{background:var(--hl);color:var(--hl-text);border-color:var(--hl);font-weight:700}
@@ -70,15 +71,15 @@ header.top{display:flex;justify-content:space-between;align-items:center;gap:16p
 .now li{display:flex;justify-content:space-between;align-items:center;gap:12px}
 .now li a{color:var(--text);text-decoration:none;font-weight:700;font-size:16px}
 .now li a:hover{text-decoration:underline}
-.now .meta{font-size:14px;color:var(--muted)}
+.now .meta{font-size:15px;color:var(--muted)}
 .now .d{font-weight:700;font-size:18px;white-space:nowrap}
 .now .d.urgent{color:var(--urgent)}
 .now .d.always{font-size:14px;background:var(--chip);border-radius:999px;padding:4px 12px}
-.now .nextline{margin:12px 0 0;padding-top:10px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.now .nextline{margin:12px 0 0;padding-top:10px;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
 .now .nextline a{color:var(--text);font-weight:500}
-.calnote{background:var(--chip);border-radius:10px;padding:10px 12px;font-size:14px;margin:0 0 10px}
+.calnote{background:var(--chip);border-radius:10px;padding:10px 12px;font-size:15px;margin:0 0 10px}
 .fixed .top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:0 0 4px}
-.fixed .mnote{background:var(--chip);border-left:3px solid var(--urgent);border-radius:0;color:var(--text);font-size:14px;padding:8px 10px;margin:8px 0}
+.fixed .mnote{background:var(--chip);border-left:3px solid var(--urgent);border-radius:0;color:var(--text);font-size:15px;padding:8px 10px;margin:8px 0}
 .fixed .badge{font-size:12px;font-weight:700;background:var(--chip);border-radius:6px;padding:2px 8px;white-space:nowrap}
 
 .layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:28px;align-items:start;margin-bottom:56px}
@@ -89,7 +90,7 @@ header.top{display:flex;justify-content:space-between;align-items:center;gap:16p
 .calhead button{font:inherit;font-size:18px;width:36px;height:36px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--text);cursor:pointer}
 .calhead button:disabled{opacity:.35;cursor:default}
 .cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px}
-.cal .wd{font-size:12px;color:var(--muted);text-align:center;padding:0 0 4px}
+.cal .wd{font-size:13px;color:var(--muted);text-align:center;padding:0 0 4px}
 .cal .wd.sun{color:var(--urgent)}
 .day{font:inherit;min-height:74px;border:1px solid transparent;border-radius:8px;background:transparent;color:var(--text);cursor:pointer;display:flex;flex-direction:column;align-items:stretch;gap:3px;padding:4px 3px;text-align:left}
 .day.empty{cursor:default;min-height:0}
@@ -103,19 +104,19 @@ header.top{display:flex;justify-content:space-between;align-items:center;gap:16p
 .mk.end{background:var(--c)}
 .pill{display:block;font-size:11px;font-weight:700;line-height:1.5;border-radius:4px;padding:0 3px;background:var(--c);color:#fff;white-space:nowrap;overflow:hidden;text-overflow:clip}
 .ring{display:block;width:9px;height:9px;border-radius:50%;border:2px solid var(--c);margin-left:2px}
-.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--muted);margin:14px 0 0}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted);margin:14px 0 0}
 .legend span{display:inline-flex;align-items:center;gap:6px}
-.lg-reg{width:18px;height:6px;border-radius:3px;background:var(--chip);box-shadow:inset 0 0 0 1px var(--line)}
+.lg-reg{width:18px;height:6px;border-radius:3px;background:var(--muted);opacity:.4}
 .lg-end{width:18px;height:6px;border-radius:3px;background:var(--muted)}
 .lg-ex{font-size:10px;font-weight:700;color:#fff;background:var(--muted);border-radius:4px;padding:0 4px}
 .lg-rr{width:9px;height:9px;border-radius:50%;border:2px solid var(--muted)}
 .selday{border-top:1px solid var(--line);margin-top:14px;padding-top:12px}
-.selday h3{font-size:14px;margin:0 0 6px;color:var(--muted);font-weight:500}
+.selday h3{font-size:15px;margin:0 0 6px;color:var(--muted);font-weight:500}
 .selday p{margin:0 0 4px;font-size:15px}
-.selday .none{color:var(--muted);font-size:14px}
+.selday .none{color:var(--muted);font-size:15px}
 
 .mlist h2{font-size:22px;margin:0 0 4px;letter-spacing:-.02em}
-.mlist .sub{font-size:14px;color:var(--muted);margin:0 0 16px}
+.mlist .sub{font-size:15px;color:var(--muted);margin:0 0 16px}
 .ex{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:0;padding:14px 16px;margin:0 0 10px}
 .ex.past{opacity:.6}
 .ex-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:0 0 8px}
@@ -127,21 +128,42 @@ header.top{display:flex;justify-content:space-between;align-items:center;gap:16p
 .ex dl{display:grid;grid-template-columns:auto 1fr;gap:3px 14px;margin:0;font-size:15px}
 .ex dt{color:var(--muted)} .ex dd{margin:0}
 .ex dd.inm{font-weight:700}
-.ex dd em{font-style:normal;font-size:13px;color:var(--muted);margin-left:6px}
+.ex dd em{font-style:normal;font-size:14px;color:var(--muted);margin-left:6px}
 .ex dd em.urgent{color:var(--urgent);font-weight:700}
-.ex .note{font-size:13px;color:var(--muted);margin:8px 0 0}
+.ex .note{font-size:14px;color:var(--muted);margin:8px 0 0}
 .ex a,.fixed a{display:inline-block;margin-top:8px;color:var(--accent);font-weight:500;text-decoration:none;font-size:14px}
 .ex a:hover,.fixed a:hover{text-decoration:underline}
 .fixed{background:var(--surface);border:1px dashed var(--line);border-radius:14px;padding:14px 16px;margin:0 0 12px}
 .fixed h3{margin:0 0 4px;font-size:16px}
-.fixed p{margin:0 0 4px;font-size:14px;color:var(--muted)}
+.fixed p{margin:0 0 4px;font-size:15px;color:var(--muted)}
 .empty-m{color:var(--muted);border:1px dashed var(--line);border-radius:14px;padding:24px;text-align:center}
 
-footer{border-top:1px solid var(--line);padding:28px 0 44px;font-size:13px;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:28px 0 44px;font-size:14px;color:var(--muted)}
 footer p{margin:0 0 6px}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.nw{white-space:nowrap}
+.updated{margin:12px 0 0;font-size:14px;color:var(--muted)}
+.st.near{background:var(--c);color:#fff}
+.ex.near{border-color:var(--c)}
+.pastfold{margin:14px 0 0}
+.pastfold>summary{cursor:pointer;list-style:none;font-size:15px;font-weight:500;color:var(--muted);border:1px dashed var(--line);border-radius:12px;padding:12px 16px;text-align:center}
+.pastfold>summary::-webkit-details-marker{display:none}
+.pastfold>summary::after{content:' ▾'}
+.pastfold[open]>summary{margin-bottom:10px}
+.pastfold[open]>summary::after{content:' ▴'}
 @media (max-width:640px){
-  .wrap{padding:0 16px}.hero{padding:40px 0 22px}
+  .wrap{padding:0 16px}
+  header.top{padding:14px 0}
+  .brand{font-size:17px}
+  .hero{padding:18px 0 14px}
+  .hero h1{font-size:27px;margin:0 0 8px}
+  .hero p{font-size:15px;line-height:1.55}
+  .updated{margin-top:8px}
+  .now{padding:14px 16px;margin-bottom:16px}
+  .now li{flex-direction:column;align-items:flex-start;gap:6px}
+  .now .d{font-size:16px}
+  .fixed .top{flex-direction:column;align-items:flex-start;gap:6px}
+  .legend{display:grid;grid-template-columns:1fr 1fr;gap:6px 12px}
   .calcard{padding:12px 10px}
   .cal{gap:2px}
   .day{min-height:62px;padding:3px 2px}
@@ -159,6 +181,7 @@ footer p{margin:0 0 6px}
   <section class="hero">
     <h1>자격증 시험 일정 안내</h1>
     <p>학원 과정과 연결된 자격증의 1년 일정을 달별로 모았습니다. 접수 전에는 반드시 시행처 공고를 확인하시기 바랍니다.</p>
+    <p class="updated" id="updated" hidden></p>
   </section>
 
   <section class="now" id="now" aria-live="polite"></section>
@@ -197,6 +220,7 @@ footer p{margin:0 0 6px}
 
   <footer>
     <p>일정은 각 시행처 공고를 바탕으로 정리했으며, 시행처 사정에 따라 변경될 수 있습니다. 접수 및 최신 일정은 시행처 홈페이지에서 확인하시기 바랍니다.</p>
+    <p id="updated2" hidden></p>
   </footer>
 </div>
 
@@ -236,12 +260,12 @@ function years(){
 function renderNow(){
   const open = DATA.exams.filter(e => e.regStart && e.regStart <= T && T <= e.regEnd).sort((a,b) => a.regEnd.localeCompare(b.regEnd));
   const rows = open.map(e => { const n = diff(e.regEnd);
-    return `<li><span><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.name)} ${esc(e.round)} ↗</a><br><span class="meta">${md(e.regStart)} ~ ${md(e.regEnd)} 접수 · 시험 ${md(e.exam)}</span></span><span class="d${n <= 3 ? " urgent" : ""}">${n === 0 ? "오늘 마감" : `마감 D-${n}`}</span></li>`; });
-  DATA.fixed.forEach(f => rows.push(`<li><span><a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.name)} ↗</a><br><span class="meta">${esc(f.round)} · 원하는 날짜·시험장을 골라 접수</span></span><span class="d always">상시 접수</span></li>`));
+    return `<li><span><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.name)} ${esc(e.round)} ↗</a><br><span class="meta"><span class="nw">${md(e.regStart)} ~ ${md(e.regEnd)}</span> 접수 · <span class="nw">시험 ${md(e.exam)}</span></span></span><span class="d${n <= 3 ? " urgent" : ""}">${n === 0 ? "오늘 마감" : `마감 D-${n}`}</span></li>`; });
+  DATA.fixed.forEach(f => rows.push(`<li><span><a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.name)} ↗</a><br><span class="meta">${esc(f.round)} · <span class="nw">원하는 날짜·시험장을 골라 접수</span></span></span><span class="d always">상시 접수</span></li>`));
   let tail = "";
   if(!open.length){
     const next = DATA.exams.filter(e => e.regStart && e.regStart > T).sort((a,b) => a.regStart.localeCompare(b.regStart))[0];
-    if(next) tail = `<p class="nextline">다음 정기 접수: <a href="${esc(next.url)}" target="_blank" rel="noopener">${esc(next.name)} ${esc(next.round)}</a> · ${md(next.regStart)} ~ ${md(next.regEnd)} <b>시작 D-${diff(next.regStart)}</b></p>`;
+    if(next) tail = `<p class="nextline">다음 정기 접수: <a href="${esc(next.url)}" target="_blank" rel="noopener">${esc(next.name)} ${esc(next.round)}</a> · <span class="nw">${md(next.regStart)} ~ ${md(next.regEnd)}</span> <b class="nw">시작 D-${diff(next.regStart)}</b></p>`;
   }
   $("now").innerHTML = `<h2>지금 접수할 수 있는 시험</h2><ul>${rows.join("")}</ul>${tail}`;
 }
@@ -259,6 +283,12 @@ function renderTabs(){
   }).join("");
   const box = $("mtabs"), b = box.children[state.m];
   if(b) box.scrollLeft = b.offsetLeft - box.clientWidth/2 + b.offsetWidth/2;
+  updFade();
+}
+function updFade(){
+  const box = $("mtabs");
+  box.classList.toggle("fl", box.scrollLeft > 2);
+  box.classList.toggle("fr", box.scrollLeft + box.clientWidth < box.scrollWidth - 2);
 }
 
 function renderChips(){
@@ -318,24 +348,33 @@ function renderList(){
   const touched = exams().filter(e => inMonth(e.regStart) || inMonth(e.regEnd) || inMonth(e.exam) || inMonth(e.result) || (e.regStart && e.regStart.slice(0,7) < key && e.regEnd.slice(0,7) > key));
   const firstIn = e => [e.regStart, e.regEnd, e.exam, e.result].filter(inMonth).sort()[0] || e.regStart;
   const rank = {open:0, soon:1, wait:2, done:3};
-  touched.sort((a,b) => rank[statusOf(a)[0]] - rank[statusOf(b)[0]] || firstIn(a).localeCompare(firstIn(b)));
+  const isNear = e => statusOf(e)[0] === "wait" && e.exam && T <= e.exam && diff(e.exam) <= 7;
+  const rk = e => isNear(e) ? 0.5 : rank[statusOf(e)[0]];
+  touched.sort((a,b) => rk(a) - rk(b) || firstIn(a).localeCompare(firstIn(b)));
   $("msub").textContent = touched.length ? `이번 달에 접수·시험·발표가 있는 회차 ${touched.length}개` : "";
   const row = (label, a, b, kind) => {
     if(!a) return "";
-    const on = inMonth(a) || inMonth(b);
+    const on = (inMonth(a) || inMonth(b)) && T <= (b || a);
     let em = "";
     if(kind === "reg" && b && T <= b && T >= a){ const n = diff(b); em = `<em class="${n <= 3 ? "urgent" : ""}">마감 ${n === 0 ? "오늘" : "D-" + n}</em>`; }
     else if(kind === "reg" && T < a){ em = `<em>시작 D-${diff(a)}</em>`; }
-    else if(kind !== "reg" && T <= a){ const n = diff(a); em = `<em>${n === 0 ? "오늘" : "D-" + n}</em>`; }
-    return `<dt>${label}</dt><dd class="${on ? "inm" : ""}">${b ? `${md(a)} ~ ${md(b)}` : mdw(a)}${em}</dd>`;
+    else if(kind !== "reg" && T <= a){ const n = diff(a); em = `<em class="${kind === "ex" && n <= 7 ? "urgent" : ""}">${n === 0 ? "오늘" : "D-" + n}</em>`; }
+    return `<dt>${label}</dt><dd class="${on ? "inm" : ""}">${b ? `<span class="nw">${md(a)} ~ ${md(b)}</span>` : `<span class="nw">${mdw(a)}</span>`}${em}</dd>`;
   };
-  $("mlist").innerHTML = touched.length ? touched.map(e => { const [sk, sl] = statusOf(e);
-    return `<article class="ex${sk === "done" ? " past" : ""}" style="${vars(e.cat)}">
-      <div class="ex-top"><h3>${esc(e.name)}<small>${esc(e.round)}</small></h3><span class="st ${sk}">${sl}</span></div>
+  const card = e => { const [sk, sl0] = statusOf(e);
+    const dn = e.exam && T <= e.exam ? diff(e.exam) : -1, near = sk === "wait" && dn >= 0 && dn <= 7;
+    const sl = near ? (dn === 0 ? "오늘 시험" : `시험 D-${dn}`) : sl0;
+    return `<article class="ex${sk === "done" ? " past" : ""}${near ? " near" : ""}" style="${vars(e.cat)}">
+      <div class="ex-top"><h3>${esc(e.name)}<small>${esc(e.round)}</small></h3><span class="st ${sk}${near ? " near" : ""}">${sl}</span></div>
       <dl>${e.regStart ? row("접수", e.regStart, e.regEnd, "reg") : `<dt>접수</dt><dd>시행처 공고 확인</dd>`}${row("시험", e.exam, null, "ex")}${row("발표", e.result, null, "rr")}</dl>
       ${e.note ? `<p class="note">${esc(e.note)}</p>` : ""}
       ${sk === "open" || sk === "soon" ? `<a href="${esc(e.url)}" target="_blank" rel="noopener">접수하러 가기 ↗</a>` : sk === "wait" ? `<a href="${esc(e.url)}" target="_blank" rel="noopener">시행처에서 확인 ↗</a>` : ""}
-    </article>`; }).join("")
+    </article>`; };
+  const active = touched.filter(e => statusOf(e)[0] !== "done"), done = touched.filter(e => statusOf(e)[0] === "done");
+  $("mlist").innerHTML = touched.length
+    ? active.map(card).join("") + (done.length ? (active.length
+        ? `<details class="pastfold"><summary>종료된 회차 ${done.length}개 보기</summary>${done.map(card).join("")}</details>`
+        : done.map(card).join("")) : "")
     : (state.cat === "컴활" ? "" : `<div class="empty-m">이번 달에는 해당 자격증 일정이 없습니다. 다른 달 또는 ‘전체’를 선택하시기 바랍니다.</div>`);
   const fx = DATA.fixed.filter(f => state.cat === "전체" || f.cat === state.cat);
   $("fixed").innerHTML = fx.map(f => `<div class="fixed"><div class="top"><h3>${esc(f.name)}</h3><span class="badge">이번 달에도 접수 가능</span></div><p>${esc(f.round)}</p>${(f.monthNotes||{})[ym()] ? `<p class="mnote">${esc(f.monthNotes[ym()])}</p>` : ""}${(f.lines||[]).map(l => `<p>${esc(l[0])}: ${esc(l[1])}</p>`).join("")}${f.note ? `<p>${esc(f.note)}</p>` : ""}<a href="${esc(f.url)}" target="_blank" rel="noopener">접수하러 가기 ↗</a></div>`).join("");
@@ -353,6 +392,8 @@ function init(){
   else { const t = parse(T); state.y = ys.includes(String(t.getFullYear())) ? t.getFullYear() : +ys[ys.length-1]; state.m = ys.includes(String(t.getFullYear())) ? t.getMonth() : 0; }
   state.sel = T;
   renderChips(); renderNow();
+  $("mtabs").addEventListener("scroll", updFade, {passive:true});
+  window.addEventListener("resize", updFade);
   $("mtabs").addEventListener("click", e => { const b = e.target.closest("button"); if(!b) return; state.m = +b.dataset.m; go(); });
   $("chips").addEventListener("click", e => { const b = e.target.closest("button"); if(!b) return;
     state.cat = b.dataset.cat; renderChips(); renderCal(); renderList(); });
@@ -363,9 +404,16 @@ function init(){
   go();
 }
 
+let LM = null;
+function renderUpdated(){
+  let txt = "";
+  if(DATA.updated && /^\d{4}-\d{2}-\d{2}$/.test(DATA.updated)){ const d = parse(DATA.updated); txt = `일정 기준일: ${d.getFullYear()}. ${d.getMonth()+1}. ${d.getDate()}.`; }
+  else if(LM && !isNaN(LM)){ txt = `최종 수정: ${LM.getFullYear()}. ${LM.getMonth()+1}. ${LM.getDate()}.`; }
+  ["updated","updated2"].forEach(id => { const el = $(id); if(!el) return; el.textContent = txt; el.hidden = !txt; });
+}
 fetch("exams.json?v=" + Date.now())
-  .then(r => { if(!r.ok) throw new Error(r.status); return r.json(); })
-  .then(d => { DATA = d; init(); })
+  .then(r => { if(!r.ok) throw new Error(r.status); const h = r.headers.get("Last-Modified"); if(h) LM = new Date(h); return r.json(); })
+  .then(d => { DATA = d; init(); renderUpdated(); })
   .catch(() => { $("mlist").innerHTML = '<div class="empty-m">일정을 불러오지 못했습니다. 잠시 후 새로고침하시기 바랍니다.</div>'; });
 </script>
 </body>
