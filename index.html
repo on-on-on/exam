@@ -136,6 +136,14 @@ header.top{display:flex;justify-content:space-between;align-items:center;gap:16p
 .fixed{background:var(--surface);border:1px dashed var(--line);border-radius:14px;padding:14px 16px;margin:0 0 12px}
 .fixed h3{margin:0 0 4px;font-size:16px}
 .fixed p{margin:0 0 4px;font-size:14px;color:var(--muted)}
+.fixed dl{display:grid;grid-template-columns:auto 1fr;gap:3px 14px;margin:6px 0 0;font-size:15px}
+.fixed dt{color:var(--muted)} .fixed dd{margin:0}
+.fixed .alert{background:var(--chip);border-left:3px solid var(--urgent);padding:9px 12px;margin:10px 0 0;font-size:14px;color:var(--text)}
+.fixed .alert b{display:block;font-size:15px}
+.fixed .mnote + .alert{margin-top:0}
+.fixed .small{font-size:13px;margin:10px 0 0}
+.now .nextline .lb{display:block;margin-bottom:2px}
+.nw{white-space:nowrap}
 .empty-m{color:var(--muted);border:1px dashed var(--line);border-radius:14px;padding:24px;text-align:center}
 
 footer{border-top:1px solid var(--line);padding:28px 0 44px;font-size:13px;color:var(--muted)}
@@ -248,7 +256,7 @@ function renderNow(){
   let tail = "";
   if(!open.length){
     const next = DATA.exams.filter(e => e.regStart && e.regStart > T).sort((a,b) => a.regStart.localeCompare(b.regStart))[0];
-    if(next) tail = `<p class="nextline">다음 정기 접수: <a href="${esc(next.url)}" target="_blank" rel="noopener">${esc(next.name)} ${esc(next.round)}</a> · ${md(next.regStart)} ~ ${md(next.regEnd)} <b>시작 D-${diff(next.regStart)}</b></p>`;
+    if(next) tail = `<p class="nextline"><span class="lb">다음 정기 접수</span><a href="${esc(next.url)}" target="_blank" rel="noopener">${esc(next.name)} ${esc(next.round)}</a> · <span class="nw">${md(next.regStart)} ~ ${md(next.regEnd)} <b>시작 D-${diff(next.regStart)}</b></span></p>`;
   }
   $("now").innerHTML = `<h2>지금 접수할 수 있는 시험</h2><ul>${rows.join("")}</ul>${tail}`;
 }
@@ -356,7 +364,7 @@ function renderList(){
         : done.map(card).join("")) : "")
     : (state.cat === "컴활" ? "" : `<div class="empty-m">이번 달에는 해당 자격증 일정이 없습니다. 다른 달 또는 ‘전체’를 선택하시기 바랍니다.</div>`);
   const fx = DATA.fixed.filter(f => state.cat === "전체" || f.cat === state.cat);
-  $("fixed").innerHTML = fx.map(f => `<div class="fixed"><div class="top"><h3>${esc(f.name)}</h3><span class="badge">이번 달에도 접수 가능</span></div><p>${esc(f.round)}</p>${(f.monthNotes||{})[ym()] ? `<p class="mnote">${esc(f.monthNotes[ym()])}</p>` : ""}${(f.lines||[]).map(l => `<p>${esc(l[0])}: ${esc(l[1])}</p>`).join("")}${f.note ? `<p>${esc(f.note)}</p>` : ""}<a href="${esc(f.url)}" target="_blank" rel="noopener">접수하러 가기 ↗</a></div>`).join("");
+  $("fixed").innerHTML = fx.map(f => `<div class="fixed"><div class="top"><h3>${esc(f.name)}</h3><span class="badge">이번 달에도 접수 가능</span></div>${(f.lines||[]).length ? `<dl>${f.lines.map(l => `<dt>${esc(l[0])}</dt><dd>${esc(l[1])}</dd>`).join("")}</dl>` : `<p>${esc(f.round)}</p>`}${(f.monthNotes||{})[ym()] ? `<p class="mnote">${esc(f.monthNotes[ym()])}</p>` : ""}${f.alert ? `<p class="alert"><b>${esc(f.alert[0])}</b>${f.alert[1] ? esc(f.alert[1]) : ""}</p>` : ""}${f.note ? `<p class="small">${esc(f.note)}</p>` : ""}<a href="${esc(f.url)}" target="_blank" rel="noopener">접수하러 가기 ↗</a></div>`).join("");
 }
 
 function go(){
